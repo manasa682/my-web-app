@@ -53,7 +53,7 @@ SDLC : software developement life cycle
 Build and release engineers
 
 
-GIT , MAVEN , TOMCAT , JENKINS , SONARQUBE , NEXUS , ANSIBLE , DOCKER ,
+GIT , MAVEN , TOMCAT , JENKINS , SONARQUBE , NEXUS , ANSIBLE , DOCKER , KUBERNETES
 
 Devops: ??  --->>> Automation tools ==>> devops engineer.
 
@@ -69,15 +69,15 @@ dev --->> code --->> github(push) --->> time save , bugs fix easy
 
 deploying the applications --->> DEV / QA / UAT / PROD
 
-cloudwatch , newrelic --->>> moniroing tools..
+cloudwatch , newrelic , datadog --->>> moniroing tools..
 
 Dev (java) testers(test) ops (ours)====>> CI , CD , CM
 
 
 
-git config --global user.name “UpenderGudipudi”
+git config --global user.name “surya1tenpath”
 
-git config --global user.email “upenderaws21@gmail.com”
+git config --global user.email “surya.1tenpath@gmail.com”
 
 =====================================================
 
@@ -86,41 +86,24 @@ git config --global user.name “rohithkumar893”
 git config --global user.email “rohithkumar893@gmail.com”
 
 
+
+
+
 git push origin master ==>> githubaccountname and github passsowrd ==>>> remote.
 
+history :
 
 
-  501  git clone https://github.com/srinivas1987devops/myweb.git
+501  git clone https://github.com/srinivas1987devops/myweb.git
   502  ls
-  503  cd myweb/
+  503  cd myweb
   504  ls
-  505  touch upendra123
+  505  touch surya
   506  git status
   507  git add .
   508  git status
-  509  git commit -m 'u123'
+  509  git commit -m 'surya1'
   510  git push origin master
   511  history
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+srinu@DESKTOP-OAV8881 MINGW64 ~/Desktop/myweb (master)
