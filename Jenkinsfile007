@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("git pull"){
             steps{
-                git credentialsId: 'f46c0966-6cb0-4b93-a968-cf2557688000', url: 'https://github.com/Mahindranampally/myweb.git'
+                git credentialsId: 'Jenkinsfile007', url: 'https://github.com/Mahindranampally/myweb.git'
             }
         }
         stage("build"){
