@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("git checkout"){
             steps{
-                git credentialsId: 'f46c0966-6cb0-4b93-a968-cf2557688000', url: 'https://github.com/Mahindranampally/myweb.git'
+                git 'https://github.com/Mahindranampally/myweb.git'
             }
         }
         stage("build"){
