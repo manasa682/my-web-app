@@ -16,6 +16,12 @@ pipeline{
                 sh "mv target/*.war target/myweb.war"
             }
         }
+          stage("docker-build"){
+            steps{
+                sh "docker build -t mahindraid/mahi:0.0.1"
+                
+            }
+        }
         stage("deploy-dev"){
             steps{
                 sshagent(['tomcat-new']) {
