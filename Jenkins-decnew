@@ -26,8 +26,9 @@ pipeline{
             steps{
             withCredentials([string(credentialsId: 'mahindraid', variable: 'docker-hub')]) {
             sh "docker login -u mahindraid -p M@hin@g@27 "
-            }
-            sh "docker push mahindraid/mahi:latest"
+           }
+            sh "docker push mahindraid/dockerfirstfile:latest"
+
         }
        }
             
