@@ -28,6 +28,7 @@ pipeline{
             sh "docker login -u mahindraid -p M@hin@ga@27 "
                 
                 }
+             }
          }
             
         stage("deploy-dev"){
