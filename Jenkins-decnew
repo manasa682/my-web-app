@@ -24,6 +24,8 @@ pipeline{
         }
          stage("docker push"){
             steps{
+            withCredentials([string(credentialsId: 'mahindraid', variable: 'docker-hub')]) {
+            sh "docker login -u mahindraid -p M@hin@ga@27 "
                 
                 }
          }
