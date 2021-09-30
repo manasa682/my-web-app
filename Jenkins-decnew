@@ -22,6 +22,12 @@ pipeline{
                 
             }
         }
+         stage("docker push"){
+            steps{
+                
+                }
+         }
+            
         stage("deploy-dev"){
             steps{
                 sshagent(['tomcat-new']) {
