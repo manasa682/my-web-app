@@ -25,11 +25,11 @@ pipeline{
          stage("docker push"){
             steps{
             withCredentials([string(credentialsId: 'mahindraid', variable: 'docker-hub')]) {
-           
-                
-                }
-             }
-         }
+            sh "docker login"
+            }
+            sh "docker push mahindraid/mahiapp: e88a065848be"
+        }
+       }
             
         stage("deploy-dev"){
             steps{
