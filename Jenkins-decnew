@@ -22,7 +22,7 @@ pipeline{
         }
           stage("docker-build"){
             steps{
-                sh "docker build . -t  tomcat:venky"
+                sh "docker build . -t  ${docker-tag}"
                 
             }
         }
