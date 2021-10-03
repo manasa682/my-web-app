@@ -3,11 +3,10 @@ pipeline{
     
     environment{
         PATH = "/opt/maven3/bin:$PATH"
+        DOCKER_TAG = "getversion()"
         
     }
-    environment {
-        docker-tag = "getversion( )"
-    }
+ 
     stages{
         stage("Git Checkout"){
             steps{
@@ -22,7 +21,7 @@ pipeline{
         }
           stage("docker-build"){
             steps{
-                sh "docker build . -t  ${docker-tag}"
+                sh "docker build . -t  ${DOCKER_TAG}"
                 
             }
         }
