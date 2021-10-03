@@ -37,9 +37,11 @@ pipeline{
             sh "docker login -u mahindraid -p M@hin@g@27 "
            }
             sh "docker pull mahindraid/dockerfirstfile:latest"
+            sh "docker run -itd --name mahi -p 130:80  c5c72151e521 "
+           }
 
         }
-       }
+     
          stage("deploy-dev"){
              steps{
                  sshagent(['tomcat-new']) {
