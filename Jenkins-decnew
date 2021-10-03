@@ -29,13 +29,21 @@ pipeline{
            }
             sh "docker push mahindraid/dockerfirstfile:latest"
 
+          }
+        }
+          stage("docker-deploy"){
+            steps{
+            withCredentials([string(credentialsId: 'mahindraid', variable: 'docker-hub')]) {
+            sh "docker login -u mahindraid -p M@hin@g@27 "
+           }
+            sh "docker pull mahindraid/dockerfirstfile:latest"
+
         }
        }
-            
-        stage("deploy-dev"){
-            steps{
-                sshagent(['tomcat-new']) {
-                sh """
+         stage("deploy-dev"){
+             steps{
+                 sshagent(['tomcat-new']) {
+                 sh """
                     scp -o StrictHostKeyChecking=no target/myweb.war  ec2-user@10.5.1.203:/home/ec2-user/apache-tomcat-9.0.50/webapps/
                     
                     ssh ec2-user@10.5.1.203/home/ec2-user/apache-tomcat-9.0.50/bin/shutdown.sh
