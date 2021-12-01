@@ -1,0 +1,27 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 12.0.7600.16667"/>
+        <meta name="ItemCount" content="0"/>
+        <meta name="IsFavorite"/>
+        <meta name="ContentPartnerListID"/>
+        <meta name="ContentPartnerNameType"/>
+        <meta name="ContentPartnerName"/>
+        <meta name="Subtitle"/>
+        <author/>
+        <title>favorite</title>
+    </head>
+    <body>
+        <seq>
+            <media src="D:\SONGS\AARU\2 AARU - DROHAM.mp3" tid="{6BC0C7A9-EEC7-4948-8E92-D1CFFB0EF714}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - WE HAVE A ROMEO.mp3" tid="{74377634-33CD-4CAD-8D95-B1134F54A79C}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - APPUDO IPPUDO.mp3" tid="{84646EEB-1480-4D94-9061-0CB9020A460A}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - BOMMANI GEESTHE.mp3" tid="{21D7E4CF-9754-4B43-9706-B3FE7F15072E}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - KANI IPPUDU.mp3" tid="{D4448CC4-CCF0-485C-8B21-C4E2A8B53177}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - LALOO DARVAJA.mp3" tid="{4C3BAAE4-5332-4A8C-9C3B-ADF6CB44FFFA}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - MUSIC BIT.mp3" tid="{6BE95DFB-CDC6-43A6-9F0A-6C73DFCC31D6}"/>
+            <media src="D:\SONGS\BOMMARILLU\01 BOMMARILLU - NAMMAKA THAPPANI.mp3" tid="{AC1AD07E-9556-4CB7-89B8-AE3DB92C5E6C}"/>
+            <media src="D:\SONGS\cheli\Manohara.MP3"/>
+        </seq>
+    </body>
+</smil>
