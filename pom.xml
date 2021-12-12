@@ -28,7 +28,7 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>nexusRepo</id>
-		    <url>http://172.31.46.139:8081/repository/sample-snapshots/</url>
+		    <url>http://175.41.212.38:8081/repository/sample-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
