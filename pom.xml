@@ -28,7 +28,7 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>pavanRepo</id>
-		    <url>http://54.65.173.239:8081/repository/sample-snapshots/</url>
+		    <url>http://172.31.14.89:8081/repository/sample-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
