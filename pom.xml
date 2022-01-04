@@ -27,12 +27,12 @@
 	
 	<distributionManagement>
 		 <snapshotRepository>
-		    <id>pavanRepo</id>
+		    <id>nexusRepo</id>
 		    <url>http://172.31.14.89:8081/repository/sample-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
-		    <id>pavanRepo</id>
+		    <id>nexusRepo</id>
 		    <url>http://172.31.14.89:8081/repository/sample-releases/</url>
 		</repository>
   	</distributionManagement>
