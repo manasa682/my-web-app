@@ -32,7 +32,7 @@
 		 </snapshotRepository>
 		
 		<repository>
-		    <id>nexusRepo</id>
+		    <id>pavanRepo</id>
 		    <url>http://172.31.14.89:8081/repository/sample-releases/</url>
 		</repository>
   	</distributionManagement>
