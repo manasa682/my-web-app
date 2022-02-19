@@ -1,0 +1,31 @@
+pipeline{
+    agent any
+     tools {
+        maven 'Maven-3.6.1'
+    }
+    
+    environment{
+        PATH = "/opt/maven3/bin:$PATH"
+    }
+    stages{
+        stage("Git Checkout"){
+            steps{
+                git credentialsId: 'javahome2', url: 'https://github.com/lavanya1189/myweb.git'
+            }
+        }
+        stage("Maven Build"){
+            steps{
+                sh "mvn clean package"
+                
+            }
+        }
+        stage("Execute Ansible"){
+            steps{
+                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'dev.in', playbook: 'copy.yml'
+            }
+           
+        }
+        
+    }
+  
+ } 
