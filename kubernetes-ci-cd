@@ -4,7 +4,7 @@ node{
    stage('SCM Checkout'){
         git branch: 'master', 
 	        credentialsId: 'javahometech',
-	        url: 'https://github.com/javahometech/myweb'
+	        url: 'https://github.com/pavan9642/myweb.git'
    }
    stage('Maven Build'){
         def mvnHome = tool name: 'maven3', type: 'maven'
@@ -12,30 +12,30 @@ node{
 		sh 'mv target/myweb*.war target/myweb.war'
    }
    stage('Build Docker Image'){
-     sh "docker build -t kammana/myweb:${mvnVersion} ."
+     sh "docker build -t pavankumar97/idea:${mvnVersion} ."
    }
    stage('Upload To DockerHub'){
      
-      sh "docker login -u kammana -p Cloud@1234"
-      sh "docker push kammana/myweb:${mvnVersion}"
+      sh "docker login -u pavankumar97/idea Pavan@9642"
+      sh "docker push pavankumar97/idea:${mvnVersion}"
    }
    
    stage('Deploy to Dev'){
-       sshagent(['tomcat-dev']) {
+       sshagent(['idid']) {
 	   def dockeRm = "ssh ec2-user@172.31.14.131 docker rm -f myweb"
-	   def dockeRun = "ssh ec2-user@172.31.14.131 docker run -d -p 80:8080 --name myweb kammana/myweb:${mvnVersion}"
+	   def dockeRun = "ssh ec2-user@172.31.14.131 docker run -d -p 2000:8080 --name myweb pavankumar97/idea:${mvnVersion}"
 	   sh "${dockeRm}"
 	   sh "${dockeRun}"	
 	  }
    }
    
-   stage('Deploy to Kubernetes'){
-	sshagent(['kubernetes-client']) {
-	   sh "scp -o StrictHostKeyChecking=no deployments.yml ec2-user@172.31.23.138:/home/ec2-user/"
+   stage('K8S Deploy'){
+	sshagent(['K8S']) {
+	   sh "scp -o StrictHostKeyChecking=no deployments.yml ec2-user@172.31.33.252:/home/ec2-user/"
 	   try{
-	     sh "ssh ec2-user@172.31.23.138 kubectl create -f /home/ec2-user/deployments.yml"
+	     sh "ssh ec2-user@172.31.33.252 kubectl create -f /home/ec2-user/deployments.yml"
 	   }catch(ex){
-	     sh "ssh ec2-user@172.31.23.138 kubectl apply -f /home/ec2-user/deployments.yml"
+	     sh "ssh ec2-user@172.31.33.252 kubectl apply -f /home/ec2-user/deployments.yml"
 	   }
 	}
    }
