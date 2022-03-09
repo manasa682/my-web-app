@@ -1,0 +1,6 @@
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+      python: 3.x
+      ruby: "$MY_RUBY_VAR"
