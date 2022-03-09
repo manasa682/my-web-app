@@ -1,8 +1,7 @@
-version: 0.2
-phases:
-  build:
-    commands:
-artifacts:
-  files:
-    - '**/*'
-  name: myname-$(date +%Y-%m-%d) 
+version:0.2
+    phases:
+      install:
+         commands: 
+             - echo Entered the installed phase...
+             - sudo apt-get update -y
+             - sudo apt-apt install -y maven
