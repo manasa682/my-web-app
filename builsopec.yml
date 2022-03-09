@@ -10,4 +10,4 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn install
+      - sudo apt-y mvn install
