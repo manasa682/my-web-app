@@ -19,7 +19,7 @@ try{
 		}
 	    slackSend channel: '#devops-2',
 				  color: 'good',
-				  message: "Job -  ${env.JOB_NAME}, Completed successfully Build URL is ${env.BUILD_URL}"
+				  message: "Job -  ${env.JOB_NAME}, Completed successfully Build URL is ${env.bUILD_URL}"
 
 
 	}
