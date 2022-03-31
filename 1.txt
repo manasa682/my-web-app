@@ -1,0 +1,53 @@
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop
+$ ls
+'AKhil_Resume NEW (2).docx'     'InDesign - Shortcut.lnk'*                 Signal.lnk*
+'AWS LINKS.docx'                'MSI Afterburner.lnk'*                     WhatsApp.lnk*
+'AWS Resource'/                  Netflix.lnk*                              desktop.ini
+'Adobe Illustrator.lnk'*         Photos/                                   myweb/
+'Adobe Photoshop 2020.lnk'*     'RedGear COSMO7.1.lnk'*                    sample.war
+'Core Temp.lnk'*                'Sai Krupa CV 12.pdf'                      sdasd.txt
+'Graphimatics Intoduction.avi'  'Sai Krupa CV Template page no 1 gp.pdf'
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop
+$ cd myweb/
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop/myweb (master)
+$ touch sk1
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop/myweb (master)
+$ git add .
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop/myweb (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    SKK
+        deleted:    sk
+        deleted:    skt
+
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop/myweb (master)
+$ git commit -m 's1'
+[master 01d9401] s1
+ 3 files changed, 4 deletions(-)
+ delete mode 100644 SKK
+ delete mode 100644 sk
+ delete mode 100644 skt
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop/myweb (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 234 bytes | 234.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Sai-krupa-18/myweb.git
+   870bc5a..01d9401  master -> master
+
+Sai Krupa@DESKTOP-66K33S4 MINGW64 ~/OneDrive/Desktop/myweb (master)
+$
