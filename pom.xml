@@ -35,12 +35,12 @@
 	
 	<distributionManagement>
 		 <snapshotRepository>
-		    <id>nexusRepo</id>
+		    <id>nexus</id>
 		    <url>http://http://44.195.22.219:8081/repository/devops-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
-		    <id>nexusRepo</id>
+		    <id>nexus</id>
 		    <url>http://44.195.22.219:8081/repository/devops-releases/</url>
 		</repository>
   	</distributionManagement>
