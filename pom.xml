@@ -36,12 +36,12 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>nexus</id>
-		    <url>http://http://44.195.22.219:8081/repository/devops-snapshots/</url>
+		    <url>http://44.205.6.69:8081/repository/automatedrepo-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>nexus</id>
-		    <url>http://44.195.22.219:8081/repository/devops-releases/</url>
+		    <url>http://44.205.6.69:8081/repository/automatedrepo-releases/</url>
 		</repository>
   	</distributionManagement>
 	
