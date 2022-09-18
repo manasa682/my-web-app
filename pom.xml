@@ -11,7 +11,10 @@
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 		<sonar.host.url>http://3.80.49.88:9000/</sonar.host.url>
-
+		<project.build.sourceEncouding>UTF-8</project.build.sourceEncouding>
+                <maven.compiler.source>1.7</maven.copmpiler.source>
+		<maven.compiler.source>1.7</maven.copmpiler.target>
+		
 	</properties>
 	<dependencies>
 
