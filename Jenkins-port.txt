@@ -1,0 +1,4 @@
+systemctl edit jenkins
+
+[Service]
+Environment="JENKINS_PORT=1234"

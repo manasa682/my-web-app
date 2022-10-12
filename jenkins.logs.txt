@@ -1,0 +1,41 @@
+root@ip-172-31-12-94 target]# history
+    1  sudo amazon-linux-extras install java-openjdk11 -y
+    2  udo wget -O /etc/yum.repos.d/jenkins.repo \
+    3  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    4  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    5  sudo yum install jenkins -y
+    6  sudo systemctl enable jenkins
+    7  sudo systemctl start jenkins
+    8  sudo systemctl status jenkins
+    9  cat /var/lib/jenkins/secrets/initialAdminPassword
+   10  cd /var/lib/jenkins/
+   11  ls
+   12  jenkins --version
+   13  cat config.xml
+   14  ls
+   15  ls
+   16  cd jobs/
+   17  ls
+   18  cd ..
+   19  cd workspace/
+   20  ls
+   21  cd ..
+   22  yum install -y git
+   23  cd workspace/sample/
+   24  ls
+   25  cd target/
+   26  ls
+   27  sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+   28  sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+   29  sudo yum install -y apache-maven
+   30  mvn --version
+   31  cd ..
+   32  ls
+   33  java -version
+   34  update-alternatives --config java
+   35  java -version
+   36  ls
+   37  cd target/
+   38  ls
+   39  history
+[root@ip-172-31-12-94 target
