@@ -1,0 +1,2 @@
+Hi I am practicing Github commnads
+Dding fewlines by using cat 
