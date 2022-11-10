@@ -43,6 +43,9 @@
 		<name>Maven.org</name>
 		<url>http://repo1.maven.org/maven2</url>
 	    </pluginRepository>
-
-    </pluginRepositories>	
+    </pluginRepositories>
+<properties>
+   <maven.compiler.source>18</maven.compiler.source>
+   <maven.compiler.target>18</maven.compiler.target>
+ </properties>
 </project>
