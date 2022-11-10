@@ -11,8 +11,11 @@
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 		<sonar.host.url>http://18.179.21.169:9000/</sonar.host.url>
-
 	</properties>
+	<properties>
+   	        <maven.compiler.source>18</maven.compiler.source>
+   		<maven.compiler.target>18</maven.compiler.target>
+       </properties>
 	<dependencies>
 
 		
@@ -44,8 +47,4 @@
 		<url>http://repo1.maven.org/maven2</url>
 	    </pluginRepository>
     </pluginRepositories>
-<properties>
-   <maven.compiler.source>18</maven.compiler.source>
-   <maven.compiler.target>18</maven.compiler.target>
- </properties>
 </project>
