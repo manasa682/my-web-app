@@ -1,2 +1,3 @@
 Hi I am practining git commands ......hope itgoes in a smooth way
-Restored the changes and now i am adding the new line ......
+Restored the changes and now i am adding the new line 
+Pushed the code into remote repo ut added another line in remote Repo and pulling them into local
