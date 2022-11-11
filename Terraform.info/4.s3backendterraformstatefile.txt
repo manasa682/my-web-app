@@ -1,0 +1,32 @@
+[root@ip-172-31-34-18 vasu]# cat main.tf
+provider "aws" {
+  access_key = "AKIAWARYSVAQ64JPDBFC"
+  secret_key = "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"
+    region = "ap-northeast-1"
+}
+
+terraform {
+  backend "s3" {
+    bucket = "mys3honey5"
+    key    = "terraform.tfstate"
+    region = "ap-northeast-1"
+  }
+}
+
+resource "aws_vpc" "main" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name        = "OMNIVPC"
+    Environment = "dev"
+    Location    = "India"
+  }
+}
+
+output "vpc_cidr" {
+  value = "${aws_vpc.main.cidr_block}"
+}
+[root@ip-172-31-34-18 vasu]#
+
+terraform init -backend-config="access_key=AKIAR3HUSP5ESIALOVXR" -backend-config="secret_key=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"

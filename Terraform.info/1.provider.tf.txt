@@ -1,14 +1,19 @@
-[root@ip-172-31-34-18 vasu]# cat main.tf
+[root@ip-172-31-34-18 sai]# cat main.tf
 provider "aws" {
-  access_key = "AKIA2RYGTDGAQRIFZ6Y6"
-  secret_key = "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"
+  access_key = "AKIAQ75X4M6IVD6YBT66"
+  secret_key = "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"
   region = "ap-northeast-1"
 }
-[root@ip-172-31-34-18 vasu]#
+[root@ip-172-31-34-18 sai]#
 
 
-sai:
 
-AKIA2RYGTDGAQRIFZ6Y6  ===>> AK
+echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile
+source ~/.bash_profile
 
-Nf5TWqtLhzL5hWzKJY6To7TVuI6NubuuGBBdgMdi  ===>> SK
+
+user: surya
+
+Access key ID: AKIAQ75X4M6IVD6YBT66
+
+Secret access key: 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

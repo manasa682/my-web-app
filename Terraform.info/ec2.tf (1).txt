@@ -1,0 +1,220 @@
+[root@ip-172-31-3-174 srini]# cat ec2.tf
+resource "aws_instance" "web" {
+  ami           = "ami-078296f82eb463377"
+  instance_type = "t2.micro"
+  key_name = "tokyo"
+
+  tags = {
+    Name = "srini1"
+  }
+}
+resource "aws_instance" "web1" {
+  ami           = "ami-078296f82eb463377"
+  instance_type = "t2.micro"
+  key_name = "tokyo"
+
+  tags = {
+    Name = "srini2"
+  }
+}
+
+
+
+terraform destroy --target=aws_instance.web
+
+
+[root@ip-172-31-0-131 vasu]# cat ec2.tf
+resource "aws_instance" "web1" {
+  ami           = "ami-078296f82eb463377"
+  instance_type = "t2.micro"
+  key_name = "tokyo"
+
+  tags = {
+    Name = "srini2"
+  }
+}
+output "myprivatedns" {
+  value = aws_instance.web1.private_ip
+}
+resource "aws_eip" "lb" {
+  instance = aws_instance.web1.id
+  vpc      = true
+}
+resource "aws_security_group" "allow_tls" {
+  name        = "vasu"
+
+  ingress {
+    from_port        = 443
+    to_port          = 443
+    protocol         = "tcp"
+    cidr_blocks = ["${aws_eip.lb.public_ip}/32"]
+  }
+}
+resource "aws_network_interface_sg_attachment" "sg_attachment" {
+  security_group_id    = aws_security_group.allow_tls.id
+  network_interface_id = aws_instance.web1.primary_network_interface_id
+}
+
+[root@ip-172-31-0-131 vasu]#
+
+
+variable.tf
+
+
+[root@ip-172-31-0-131 vasu]# cat variables.tf
+variable "myip" {
+  default     = "35.79.126.111/32"
+}
+[root@ip-172-31-0-131 vasu]#
+
+
+terraform plan -var="myip=30.20.5.2/32"
+
+
+export TF_VAR_myip=80.20.4.5/32
+echo $TF_VAR_myip
+
+cli , tfvars , enviromentvariable , default 
+
+variables.:
+
+provider "aws" {
+   region     = "eu-central-1"
+   access_key = "AKIATQ37NXB2OBQHAALW"
+   secret_key = "ilKygurap8zSErv7jySTDi2796WGqMkEtN6txNHf"
+}
+
+resource "aws_instance" "ec2_example" {
+   
+   ami           = "ami-0767046d1677be5a0"
+   instance_type = "t2.micro"
+   
+   tags = {
+           Name = "Terraform EC2"
+   }
+}
+
+
+variable "instance_type" {
+   description = "Instance type t2.micro"
+   type        = string
+   default     = "t2.micro"
+} 
+
+
+instance_type = var.instance_type
+
+
+===========================================================
+
+provider "aws" {
+   region     = "eu-central-1"
+   access_key = "AKIATQ37NXB2AYK7R6PQ"
+   secret_key = "S1Yg1Qm2JNSej8EHdhPTiu5l5ZD36URs3ed2NyYT"
+}
+
+resource "aws_instance" "ec2_example" {
+
+   ami           = "ami-0767046d1677be5a0"
+   instance_type =  "t2.micro"
+   count = var.instance_count
+
+   tags = {
+           Name = "Terraform EC2"
+   }
+}
+
+variable "instance_count" {
+  description = "EC2 instance count"
+  type        = number
+  default     = 2
+}
+
+===============================================================================
+
+provider "aws" {
+   region     = "eu-central-1"
+   access_key = "AKIATQ37NXB2AYK7R6PQ"
+   secret_key = "S1Yg1Qm2JNSej8EHdhPTiu5l5ZD36URs3ed2NyYT"
+}
+
+
+resource "aws_instance" "ec2_example" {
+
+   ami           = "ami-0767046d1677be5a0"
+   instance_type =  "t2.micro"
+   count = 1
+  associate_public_ip_address = var.enable_public_ip
+
+   tags = {
+           Name = "Terraform EC2"
+   }
+
+}
+
+variable "enable_public_ip" {
+  description = "Enable public IP address"
+  type        = bool
+  default     = true
+}
+
+
+==========================================================================
+
+
+provider "aws" {
+   region     = "eu-central-1"
+   access_key = "AKIATQ37NXB2OBQHAALW"
+   secret_key = "ilKygurap8zSErv7jySTDi2796WGqMkEtN6txNHf"
+}
+resource "aws_instance" "ec2_example" {
+
+   ami           = "ami-0767046d1677be5a0"
+   instance_type =  "t2.micro"
+   count = 1
+
+   tags = {
+           Name = "Terraform EC2"
+   }
+
+}
+
+resource "aws_iam_user" "example" {
+  count = length(var.user_names)
+  name  = var.user_names[count.index]
+}
+
+variable "user_names" {
+  description = "IAM usernames"
+  type        = list(string)
+  default     = ["user1", "user2", "user3"]
+}
+
+
+===========================================================
+
+provider "aws" {
+   region     = "eu-central-1"
+   access_key = "AKIATQ37NXB2OBQHAALW"
+   secret_key = "ilKygurap8zSErv7jySTDi2796WGqMkEtN6txNHf"
+}
+resource "aws_instance" "ec2_example" {
+
+   ami           = "ami-0767046d1677be5a0"
+   instance_type =  "t2.micro"
+
+   tags = var.project_environment
+
+}
+
+
+variable "project_environment" {
+  description = "project name and environment"
+  type        = map(string)
+  default     = {
+    project     = "project-alpha",
+    environment = "dev"
+  }
+}
+==============================================================
+
