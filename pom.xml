@@ -20,16 +20,7 @@
                 <sonar.password>admin</sonar.password>
                 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
                 <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
      </properties>
-	<pluginManagement>
-  	<plugins>
-    	<plugin>
-      	<artifactId>maven-war-plugin</artifactId>
-      	<version>3.2.2</version>
-    	</plugin>
-  	</plugins>
-    </pluginManagement>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
