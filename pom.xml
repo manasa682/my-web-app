@@ -7,7 +7,7 @@
 	<version>8.2.0</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
-<properties>
+	<properties>
                 <docker.image.prefix>kammana</docker.image.prefix>
                 <jdk.version>1.8</jdk.version>
                 <spring.version>6.1.2.RELEASE</spring.version>
@@ -21,7 +21,15 @@
                 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
                 <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        </properties>
+     </properties>
+	<pluginManagement>
+  	<plugins>
+    	<plugin>
+      	<artifactId>maven-war-plugin</artifactId>
+      	<version>3.2.2</version>
+    	</plugin>
+  	</plugins>
+    </pluginManagement>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
