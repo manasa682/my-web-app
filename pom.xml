@@ -42,12 +42,6 @@
 		    <url>http://54.224.88.218:8081/repository/sample-release/</url>
 		</repository>
   	</distributionManagement>
-	
-	<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.3.1</version>
-</plugin>
 	<pluginRepositories>
 	    <pluginRepository>    
 		<id>maven1</id>
