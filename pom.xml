@@ -35,7 +35,7 @@
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
+            <version>3.0</version>
             <configuration>
                <source>17.0.5</source>
                <target>17.0.5</target>
@@ -47,7 +47,7 @@
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.5</version>
             <configuration>
                 <webResources>
                    <resource>
