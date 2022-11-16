@@ -13,8 +13,8 @@
                 <spring.version>6.1.2.RELEASE</spring.version>
                 <junit.version>5.11</junit.version>
                 <log4j.version>1.2.17</log4j.version>
-                <maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+                <maven.compiler.source>1.17</maven.compiler.source>
+		<maven.compiler.target>1.17</maven.compiler.target>
                 <sonar.host.url>http://44.199.227.92:9000</sonar.host.url>
                 <sonar.login>admin</sonar.login>
                 <sonar.password>admin</sonar.password>
@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>3.8.6</version>
 			<scope>test</scope>
 		</dependency>
 
