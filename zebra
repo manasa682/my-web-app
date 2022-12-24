@@ -4,3 +4,6 @@ tomcat
 jenkins
 sonarcube
 ansible
+nexus
+docker
+cubernetes
