@@ -14,7 +14,6 @@
 
 	</properties>
 	<dependencies>
-              <project>
   <!-- Other sections such as <modelVersion>, <groupId>, <artifactId>, <version>, <dependencies>, etc. -->
 
   <build>
@@ -32,7 +31,6 @@
   </build>
 
   <!-- Other sections such as <repositories>, <profiles>, etc. -->
-</project>
 		
 
 		
