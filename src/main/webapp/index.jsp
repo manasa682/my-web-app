@@ -1,5 +1,5 @@
 <html>
 <body>
-	<h1 style="color: red; font-size: 40px;" align="center">  GANA TECH </h1>
+	<h1 style="color: green; font-size: 40px;" align="center">  welcome to the jenkins-1 </h1>
 </body>
 </html>
