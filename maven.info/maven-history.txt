@@ -1,5 +1,6 @@
 [root@ip-172-31-34-233 target]# history
     1  yum install -y java-1.8.0-openjdk-devel.x86_64
+(jemkins) -   sudo amazon-linux-extras install java-openjdk11-y
 
 
     2  yum install -y git
