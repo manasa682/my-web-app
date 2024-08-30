@@ -1,5 +1,5 @@
 <html>
 <body>
-	<h1 style="color: green; font-size: 40px;" align="center">  GANA TECH APP VERSION-Live Project 10AUGUST-2024.!!!!!!</h1>
+	<h1 style="color: green; font-size: 40px;" align="center">  GANA TECH APP VERSION-Live Project 10th AUGUST-2024.!!!!!!</h1>
 </body>
 </html>
